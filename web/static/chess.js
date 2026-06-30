@@ -265,7 +265,7 @@ function renderBoard(data) {
       const piece = board[r][c];
       if (piece) {
         const span = document.createElement('span');
-        span.className = 'piece';
+        span.className = 'piece ' + (piece === piece.toUpperCase() ? 'white' : 'black');
         span.textContent = PIECES[piece] || piece;
         sq.appendChild(span);
       } else if (targetSet.has(`${r},${c}`)) {
