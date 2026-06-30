@@ -135,23 +135,19 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 78%;
-  height: 78%;
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
   font-size: 0.88em;
   line-height: 1;
 }
-/* Fond ivoire = pièce blanche */
 .piece.white {
-  background: radial-gradient(circle at 38% 35%, #fffdf0, #e8d8b0);
-  border: 1.5px solid #b0986a;
-  box-shadow: 0 2px 5px rgba(0,0,0,.45), inset 0 1px 2px rgba(255,255,255,.9);
+  background: #ffffff;
+  border: 2px solid #999;
 }
-/* Fond ébène = pièce noire */
 .piece.black {
-  background: radial-gradient(circle at 38% 35%, #4a3520, #1a0e05);
-  border: 1.5px solid #6b4c28;
-  box-shadow: 0 2px 5px rgba(0,0,0,.6), inset 0 1px 1px rgba(255,255,255,.12);
+  background: #1a1a1a;
+  border: 2px solid #555;
 }
 .flipped #board { transform: rotate(180deg); }
 .flipped .sq .piece { transform: rotate(180deg); display: inline-block; }
