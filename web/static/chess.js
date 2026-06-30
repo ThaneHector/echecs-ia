@@ -2,9 +2,11 @@
    Échecs IA — frontend
    ═══════════════════════════════════════════════════════════════════════════ */
 
+// ︎ = variation selector "text" pour désactiver le rendu emoji et respecter le color CSS
+const TV = '︎';
 const PIECES = {
-  K: '♔', Q: '♕', R: '♖', B: '♗', N: '♘', P: '♙',
-  k: '♚', q: '♛', r: '♜', b: '♝', n: '♞', p: '♟',
+  K: '♔'+TV, Q: '♕'+TV, R: '♖'+TV, B: '♗'+TV, N: '♘'+TV, P: '♙'+TV,
+  k: '♚'+TV, q: '♛'+TV, r: '♜'+TV, b: '♝'+TV, n: '♞'+TV, p: '♟'+TV,
 };
 
 const PIECE_VALUES = { P: 1, N: 3, B: 3, R: 5, Q: 9 };
