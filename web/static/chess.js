@@ -2,11 +2,19 @@
    Échecs IA — frontend
    ═══════════════════════════════════════════════════════════════════════════ */
 
-// ︎ = variation selector "text" pour désactiver le rendu emoji et respecter le color CSS
-const TV = '︎';
 const PIECES = {
-  K: '♔'+TV, Q: '♕'+TV, R: '♖'+TV, B: '♗'+TV, N: '♘'+TV, P: '♙'+TV,
-  k: '♚'+TV, q: '♛'+TV, r: '♜'+TV, b: '♝'+TV, n: '♞'+TV, p: '♟'+TV,
+  K: 'https://upload.wikimedia.org/wikipedia/commons/4/42/Chess_klt45.svg',
+  Q: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Chess_qlt45.svg',
+  R: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Chess_rlt45.svg',
+  B: 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Chess_blt45.svg',
+  N: 'https://upload.wikimedia.org/wikipedia/commons/7/70/Chess_nlt45.svg',
+  P: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg',
+  k: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Chess_kdt45.svg',
+  q: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Chess_qdt45.svg',
+  r: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Chess_rdt45.svg',
+  b: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Chess_bdt45.svg',
+  n: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Chess_ndt45.svg',
+  p: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Chess_pdt45.svg',
 };
 
 const PIECE_VALUES = { P: 1, N: 3, B: 3, R: 5, Q: 9 };
@@ -266,9 +274,10 @@ function renderBoard(data) {
 
       const piece = board[r][c];
       if (piece) {
-        const span = document.createElement('span');
-        span.className = 'piece ' + (piece === piece.toUpperCase() ? 'white' : 'black');
-        span.textContent = PIECES[piece] || piece;
+        const span = document.createElement('img');
+        span.className = 'piece';
+        span.src = PIECES[piece];
+        span.alt = piece;
         sq.appendChild(span);
       } else if (targetSet.has(`${r},${c}`)) {
         // Indicateur case vide

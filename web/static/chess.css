@@ -132,22 +132,10 @@ body {
 }
 .piece {
   pointer-events: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
-  font-size: 0.88em;
-  line-height: 1;
-}
-.piece.white {
-  background: #ffffff;
-  border: 2px solid #999;
-}
-.piece.black {
-  background: #1a1a1a;
-  border: 2px solid #555;
+  width: 85%;
+  height: 85%;
+  display: block;
+  margin: auto;
 }
 .flipped #board { transform: rotate(180deg); }
 .flipped .sq .piece { transform: rotate(180deg); display: inline-block; }
