@@ -132,24 +132,26 @@ body {
 }
 .piece {
   pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 78%;
+  height: 78%;
+  border-radius: 50%;
+  font-size: 0.88em;
   line-height: 1;
-  display: inline-block;
-  position: relative;
 }
-/* Pièces blanches : symbole clair avec contour sombre */
+/* Fond ivoire = pièce blanche */
 .piece.white {
-  color: #fff;
-  -webkit-text-stroke: 1.5px #1a1a1a;
-  filter: drop-shadow(0 1px 1px rgba(0,0,0,.7));
+  background: radial-gradient(circle at 38% 35%, #fffdf0, #e8d8b0);
+  border: 1.5px solid #b0986a;
+  box-shadow: 0 2px 5px rgba(0,0,0,.45), inset 0 1px 2px rgba(255,255,255,.9);
 }
-/* Pièces noires : symbole sombre avec halo clair pour contraste */
+/* Fond ébène = pièce noire */
 .piece.black {
-  color: #111;
-  -webkit-text-stroke: 0.5px #000;
-  filter: drop-shadow(0 0 2px rgba(255,255,255,.5)) drop-shadow(0 1px 2px rgba(0,0,0,.8));
-  text-shadow:
-    0 0 3px rgba(255,255,255,.4),
-    0 0 1px rgba(255,255,255,.6);
+  background: radial-gradient(circle at 38% 35%, #4a3520, #1a0e05);
+  border: 1.5px solid #6b4c28;
+  box-shadow: 0 2px 5px rgba(0,0,0,.6), inset 0 1px 1px rgba(255,255,255,.12);
 }
 .flipped #board { transform: rotate(180deg); }
 .flipped .sq .piece { transform: rotate(180deg); display: inline-block; }
